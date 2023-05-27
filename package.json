@@ -1,0 +1,15 @@
+{
+  "bin": "index.js",
+  "name": "fdep",
+  "version": "1.0.0",
+  "description": "find deprecated code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Calkins",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
