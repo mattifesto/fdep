@@ -75,10 +75,7 @@ util.promisify(
                 yamlAsString
             );
 
-            console.log(
-                "doc:\n" +
-                JSON.stringify(doc)
-            );
+
 
             /**
              * BUGBUG we only support one item
