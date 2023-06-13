@@ -82,6 +82,14 @@ util.promisify(
              * BUGBUG we need to escape the regex
              */
 
+            let regex =
+            doc.items[0].regex;
+
+            let messageValue =
+            doc.items[0].message === undefined ?
+            '' :
+            doc.items[0].message;
+
             let syslogSeverity =
             doc.items[0].syslogSeverity === undefined ?
             "UNDEFINED" :
@@ -93,12 +101,11 @@ util.promisify(
 
 --------------------
 file: ${yamlFile}
+regex: ${regex}
+message: ${messageValue}
 syslog severity: ${syslogSeverity}
 `
             );
-
-            let regex =
-            doc.items[0].regex;
 
             let command =
             `ack --php --css --js --heading --match '${regex}' --ignore-dir=data --sort-files`;
